@@ -1,9 +1,9 @@
 def gcd(a,b):
-    if a==0:
-        return b
-    return gcd(b%a,a)
-t=int(input())
+    if(b==0):
+        return a
+    return gcd(b,a%b)
+t=int(input("Enter no. of test cases: "))
 while t:
-    a,b = map(int,input().split())
+    a,b=(map(int,input().split()))
     print(gcd(a,b))
-    t=t-1
+    t-=1
