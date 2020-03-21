@@ -10,3 +10,8 @@ def generatePrimes(n):
             while i <= n:
                 res[i] = False
                 i=i+p
+        p+=1
+    
+    for i in range(0,len(res)):
+        if res[i] == True:
+            print(i,end=" ")
