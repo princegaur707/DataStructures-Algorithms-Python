@@ -15,3 +15,9 @@ def generatePrimes(n):
     for i in range(0,len(res)):
         if res[i] == True:
             print(i,end=" ")
+            
+t=int(input())
+while t:
+    n = int(input())
+    print(generatePrimes(n))
+    t=t-1
