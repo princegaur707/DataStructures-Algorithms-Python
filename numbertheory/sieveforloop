@@ -12,3 +12,8 @@ def genPrimes(x,y):
     for i in range(x,y+1):
         if primes[i]==True:
             print(i,end=" ")
+t = int(input())
+while t:
+    x,y = map(int,input().split())
+    genPrimes(x,y)
+    t=t-1            
