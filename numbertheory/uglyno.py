@@ -13,3 +13,8 @@ class Solution:
         num = self.maxDivide(num,2)
         num = self.maxDivide(num,3)
         num = self.maxDivide(num,5)
+        if num == 1:
+            return True
+        else:
+            return False
+        
