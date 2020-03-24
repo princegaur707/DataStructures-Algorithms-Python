@@ -12,3 +12,17 @@ def getNimSum(arr,n):
     return res
 
 t = int(input())
+while t:
+    a,b = map(str,input().split())
+    arr = list(map(int,input().split()))
+    if getNimSum(arr,len(arr)) != 0 :
+        if a == "Alice":
+            print(a)
+        elif a == "Bob":
+            print(a)
+    else:
+        if a == "Alice":
+            print(b)
+        elif a == "Bob":
+            print(b)      
+    t=t-1
