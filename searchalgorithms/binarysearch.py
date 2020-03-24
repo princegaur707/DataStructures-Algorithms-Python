@@ -13,3 +13,10 @@ def binSearch(arr,key,left,right):
         return binSearch(arr,key,mid+1,right)
     else:
         return binSearch(arr,key,left,mid-1)
+t=int(input())
+while t:
+    arr = list(map(int,input().split()))
+    key = int(input())
+    print(binSearch(arr,key,0,len(arr)-1))
+    t=t-1
+    
