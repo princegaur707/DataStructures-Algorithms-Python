@@ -1,6 +1,6 @@
 import math
-from math import floor,ceil,sqrt
-def prime(n):
+from math import floor, ceil, sqrt
+def checkprime(n):
     if(n<=1):
         return False
     if(n<=3):
@@ -11,12 +11,11 @@ def prime(n):
         if(n%i==0 or n%(i+2)==0):
             return False
     return True
-while(True):
+while True:
     try:
-        n=int(input())
-        r=prime(n)
+        n=int(input("Enter number:"))
+        r=checkprime(n)
         print(r)
     except:
         print("That was invalid input!")
         break
-    
