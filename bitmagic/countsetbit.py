@@ -11,3 +11,4 @@ while t:
     n = int(input())
     print(cntsetbit(n))
     t=t-1
+    
