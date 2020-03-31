@@ -1,6 +1,6 @@
 # T.C n*log(log(n))
 def generatePrimes(n):
-    res = [True]*(n+1)
+    res = [True]*(n)
     res[0] = False
     res[1] = False
     p = 2
@@ -15,9 +15,8 @@ def generatePrimes(n):
     for i in range(0,len(res)):
         if res[i] == True:
             print(i,end=" ")
-            
-t=int(input())
-while t:
-    n = int(input())
+while True:       
+
+    n = int(input("Enter number:   "))
     print(generatePrimes(n))
-    t=t-1
+
