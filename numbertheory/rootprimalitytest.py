@@ -1,3 +1,4 @@
+#T.C O(sqrt(n)) 
 from math import floor,ceil,sqrt
 def checkprime(n):
     if n<=1:
