@@ -1,6 +1,7 @@
+#print all primes smaller than or equal to n
 # T.C n*log(log(n))
 def generatePrimes(n):
-    res = [True]*(n)
+    res = [True]*(n+1)
     res[0] = False
     res[1] = False
     p = 2
