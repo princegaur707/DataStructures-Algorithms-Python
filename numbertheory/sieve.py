@@ -1,3 +1,4 @@
+#Sieve of Eratosthenes
 #print all primes smaller than or equal to n
 # T.C n*log(log(n))
 def genprime(n):
