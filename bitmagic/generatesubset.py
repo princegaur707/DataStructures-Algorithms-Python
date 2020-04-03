@@ -26,4 +26,4 @@ class Solution:
             output.append([nums[j] for j in range(n) if bitmask[j] == '1'])
         return output
 ob=Solution()
-
+ob.subsets([1,2,3])
