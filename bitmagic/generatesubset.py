@@ -25,3 +25,5 @@ class Solution:
             bitmask = bin(i)[3:]
             output.append([nums[j] for j in range(n) if bitmask[j] == '1'])
         return output
+ob=Solution()
+
