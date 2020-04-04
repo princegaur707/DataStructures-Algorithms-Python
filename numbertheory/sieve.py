@@ -6,17 +6,19 @@ def genprime(n):
     prime[0]=False
     prime[1]=False
     p=2
-    for i in range(p*p,n+1,1):
-        if(prime[i]==True):
+    for p in range(p*p,n+1,1):
+        if prime[p]==True:  #which this one is comparing and which this one is setting
             for i in range(p*p,n+1,p):
                 prime[i]=False
     for i in range(len(prime)):
-        if(prime[i]==True):
+        if prime[i]==True:
             print(i,end=" ")
 while True:
     try:
         n=int(input("\nEnter number:   "))
         genprime(n)
     except:
+    #except Exception as e:
+        #print(e)
         print("Invalid input!")
         break
