@@ -7,7 +7,7 @@ def genprime(n):
     prime[1]=False
     p=2
     for p in range(p*p,n+1,1):
-        if prime[p]==True:  #which this one is comparing and which this one is setting
+        if prime[p]==True: 
             for i in range(p*p,n+1,p):
                 prime[i]=False
     for i in range(len(prime)):
@@ -18,7 +18,5 @@ while True:
         n=int(input("\nEnter number:   "))
         genprime(n)
     except:
-    #except Exception as e:
-        #print(e)
         print("Invalid input!")
         break
