@@ -10,13 +10,12 @@ def genPrimes(x,y):
         if primes[p] == True:
             for i in range(p*p,n+1,p):
                 primes[i]=False
-    
     for i in range(x,y+1):
         if primes[i]==True:
             print(i,end=" ")
 while True:
     try:
-        x,y = map(int,input("Enter range(x y):   ").split())
+        x,y = map(int,input("\nEnter range(x y):   ").split())
         genPrimes(x,y)
     except:
         print("Invalid input!")

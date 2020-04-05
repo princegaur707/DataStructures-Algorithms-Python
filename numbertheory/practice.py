@@ -1,12 +1,14 @@
-def fractionSubtraction(a, b):
-    cnt1=(a[0]*b[1]-a[1]*b[0])
-    cnt2=(a[1]*b[1])
-    def gcd(cnt1,cnt2):
-        if(cnt2==0):
-            return cnt1
-        return gcd(cnt2,cnt1%cnt2)
-    g=gcd(cnt1,cnt2)
-    return([cnt1/g,cnt2/g])
-
-p=fractionSubtraction([7,10],[3,10])
-print(p)
+from math import ceil,sqrt
+def genprime(x,y):
+    primes=[True]*(y+1)
+    primes[0]=primes[1]=False
+    for p in range(2,ceil(sqrt(y))):
+        if primes[p]==True:
+            for i in range(p*p,y+1,p):
+                primes[i]=False
+    for i in range(x,y+1):
+        if primes[i]==True:
+            print(i,end =' ')
+while True:
+    x,y=map(int,input().split())
+    genprime(x,y)

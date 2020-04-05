@@ -12,9 +12,9 @@ def sqrtdivisors(n):
     ls1+=ls[::-1]
     return(ls1)
 while True:
-    #try:
-    n=int(input("Enter number:    "))
-    print(sqrtdivisors(n))
-    # except:
-    #     print("Invalid input!")
-    #     break
+    try:
+        n=int(input("Enter number:    "))
+        print(sqrtdivisors(n))
+    except:
+        print("Invalid input!")
+        break
