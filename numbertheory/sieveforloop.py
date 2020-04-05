@@ -1,4 +1,6 @@
-# T.C O(n*log(logn))
+#Sieve of Eratosthenes
+#print all primes in range(x,y)
+# T.C n*log(log(n))
 from math import floor,ceil,sqrt
 def genPrimes(x,y):
     n = y
