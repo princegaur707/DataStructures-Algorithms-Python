@@ -1,7 +1,7 @@
 #Sieve of Eratosthenes
 #print all primes in range(x,y)
 # T.C n*log(log(n))
-from math import floor,ceil,sqrt
+from math import ceil,sqrt
 def genPrimes(x,y):
     n = y
     primes = [True]*(n+1)
@@ -14,8 +14,10 @@ def genPrimes(x,y):
     for i in range(x,y+1):
         if primes[i]==True:
             print(i,end=" ")
-t = int(input())
-while t:
-    x,y = map(int,input().split())
-    genPrimes(x,y)
-    t=t-1            
+while True:
+    try:
+        x,y = map(int,input("Enter range(x y):   ").split())
+        genPrimes(x,y)
+    except:
+        print("Invalid input!")
+        break         
