@@ -4,9 +4,10 @@ def printAnagramsTogether(words):
 	groupedWords = defaultdict(list) 
 	for word in words: 
 		groupedWords["".join(sorted(word))].append(word)
-    print(groupedWords.items())
 	for group in groupedWords(): 
-		print(" ".join(group))	 
+		print(" ".join(group))
+        
 if __name__ == "__main__": 
 	arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
 	printAnagramsTogether(arr)	 
+    print(groupedWords.items())
