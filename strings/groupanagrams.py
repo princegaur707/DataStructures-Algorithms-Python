@@ -1,11 +1,12 @@
-def groupana(arr):
-    a=[[]]  
-    l=len(arr)
-    for i in range(l):
-        arr[i]=list(arr[i])
-        if(arr[i].sort not in a):
-            a.append(str(arr[i]))
-    return a
-while True:
-    print(groupana(["eat", "tea", "tan", "ate", "nat", "bat"]))
-    
+from collections import defaultdict 
+
+def printAnagramsTogether(words): 
+	groupedWords = defaultdict(list) 
+	for word in words: 
+		groupedWords["".join(sorted(word))].append(word)
+    print(groupedWords.items())
+	for group in groupedWords(): 
+		print(" ".join(group))	 
+if __name__ == "__main__": 
+	arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
+	printAnagramsTogether(arr)	 
