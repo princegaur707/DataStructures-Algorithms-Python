@@ -1,13 +1,11 @@
-from collections import defaultdict 
+from collections import defaultdict
 
-def printAnagramsTogether(words): 
-	groupedWords = defaultdict(list) 
-	for word in words: 
-		groupedWords["".join(sorted(word))].append(word)
-	for group in groupedWords(): 
-		print(" ".join(group))
-        
-if __name__ == "__main__": 
-	arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
-	printAnagramsTogether(arr)	 
-    print(groupedWords.items())
+def groupAnagrams(arr):
+    dict1=defaultdict(list)
+    for i in arr:
+        dict1["".join(sorted(i))].append(i)
+        print(dict1.items())
+    print("Here comes the final: ")
+    for i,j in dict1.items():
+        print(i,j)
+groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
