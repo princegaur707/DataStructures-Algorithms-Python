@@ -8,6 +8,7 @@ while t:
     n=int(input())
     str1=input()
     p=list(powerset(str1))
+    print(p)
     cnt=0
     for i in p:
         try:
