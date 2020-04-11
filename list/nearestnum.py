@@ -1,17 +1,14 @@
 class Solution:
     def findClosestElements(self, arr, k, x):
-        arr1=[]
-        i=j=n=arr.index(x)
-        arr1.append(arr[n])
-        l=len(arr)
-        while len(arr1)!=k:
-            if i-1>=0:
-                arr1.append(arr[i-1])
-                i-=1
-            if j+1<l and len(arr1)!=k:
-                arr1.append(arr[j+1])
-                j+=1
-        arr1.sort()
-        return arr1
+        res = []
+        for i in arr:
+            res.append((i,abs(i-x)))
+        res.sort(key = lambda x:[x[1],x[0]])
+        print(res)
+        returnres = []
+        for i in range(k):
+            returnres.append(res[i][0])
+        returnres.sort()
+        return returnres
 obj=Solution()
 print(obj.findClosestElements([1,2,3,4,5], 4, 3))
