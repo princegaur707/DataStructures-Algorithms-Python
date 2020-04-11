@@ -1,4 +1,5 @@
 #Check all the variations of string(not subset which start and end with 1)
+# chain - combines several iterables into one long one;
 from itertools import combinations,chain
 t=int(input())
 while t:
