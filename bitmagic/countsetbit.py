@@ -6,9 +6,11 @@ def cntsetbit(n):
         n = n & (n-1)
         cnt = cnt + 1
     return cnt
-t = int(input())
-while t:
-    n = int(input())
-    print(cntsetbit(n))
-    t=t-1
-    
+
+while True:
+    try:
+        n = int(input("\nEnter number:   "))
+        print(cntsetbit(n))
+    except:
+        print("Invalid input!")
+        break
