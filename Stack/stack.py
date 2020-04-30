@@ -30,6 +30,7 @@ class Stack:
         
     def peek(self):
         if self.isEmpty():
+            print("Stack Empty")
             return False
         else:
             return self.stack[self.top]
@@ -44,6 +45,7 @@ class Stack:
         
     def printStack(self):
         if self.isEmpty():
+            print("Stack Empty")
             return False
         else:
             tmp = self.top
@@ -59,3 +61,7 @@ class Stack:
         else:
             print("Stack is not Overflow")
             return False
+
+obj=Stack(10)
+obj.push([1,2,3,4,5])
+obj.printStack()
