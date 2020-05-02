@@ -1,6 +1,5 @@
 import numpy as np
->>> na = np.array(a)
->>> np.rot90(na)
-array([[3, 6, 9],
-       [2, 5, 8],
-       [1, 4, 7]])
+m = np.array([[1,2], [3,4], [5,6]], int)
+na=np.rot90(m, k=1, axes=(0, 1))  # k: no. of rotations, axes:from 1st to 2nd
+print(m)
+print(na)

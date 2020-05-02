@@ -27,4 +27,6 @@ class linkedlist:
         if self.start==None:
             self.start=newNode
         else:
-            
+            newNode.next=start
+            start=newNode
+obj=linkedlist()
