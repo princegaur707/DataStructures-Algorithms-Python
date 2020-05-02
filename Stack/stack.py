@@ -53,6 +53,24 @@ class Stack:
                 print(self.stack[tmp])
                 tmp=tmp-1
             return True
+    
+    def deleteNode(self,key):      
+        # temp initialised with head
+        temp = prev = self.head
+        # head is the Node to be deleted
+        if temp != None and temp.data == key:
+            self.head = temp.next
+            temp = None
+            return
+        # find previous node for the node to be deleted
+        while temp != None and temp.data != key:
+            prev = temp
+            temp = temp.next
+        # if temp reaches end this means key to be deleted is not present
+        if temp == None:
+            return
+        prev.next = temp.next
+        temp = None
                 
     def isFull(self):
         if self.top >= self.maxsize -1:

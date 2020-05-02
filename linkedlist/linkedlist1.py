@@ -1,3 +1,4 @@
+#deletefirst,deletelast,deleteany(count can also be defined),insert,view
 class node():
     def __init__(self,data):
         self.data=data
